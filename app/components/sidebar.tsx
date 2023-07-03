@@ -99,8 +99,8 @@ export function SideBar(props: { className?: string }) {
         <div className={styles["sidebar-title"]}>next web pandora版</div>
         <div className={styles["sidebar-sub-title"]}>
           本站承诺：隐私安全，所有对话数据只保存在用户浏览器
+          <br />
           本站使用的模型是：chatgpt官网的GPT-3.5模型
-          不再提供免费的gpt4,如需要专业的gpt4服务，加他（微信号：gotodo5）
         </div>
         <div className={styles["sidebar-logo"] + " no-dark"}>
           <ChatGptIcon />
@@ -134,13 +134,13 @@ export function SideBar(props: { className?: string }) {
       >
         <ChatList narrow={shouldNarrow} />
       </div>
-      <div className={styles["sidebar-title-ad"]}>
+      {/* <div className={styles["sidebar-title-ad"]}>
         广告：
         <div className={styles["sidebar-sub-title-ad"]}>
           😊
           如果需要软件、网站的安装部署，服务器环境搭建，宝塔，自动化测试代写，域名SSL证书配置的服务，加他（微信号：gotodo5）
         </div>
-      </div>
+      </div> */}
       <div className={styles["sidebar-tail"]}>
         <div className={styles["sidebar-actions"]}>
           <div className={styles["sidebar-action"] + " " + styles.mobile}>

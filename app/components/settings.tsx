@@ -267,7 +267,7 @@ export function Settings() {
             </Popover>
           </ListItem>
 
-          <ListItem
+          {/* <ListItem
             title={Locale.Settings.Update.Version(currentVersion ?? "unknown")}
             subTitle={
               checkingUpdate
@@ -290,7 +290,7 @@ export function Settings() {
                 onClick={() => checkUpdate(true)}
               />
             )}
-          </ListItem>
+          </ListItem> */}
 
           <ListItem title={Locale.Settings.SendKey}>
             <select
@@ -414,7 +414,7 @@ export function Settings() {
             <></>
           )}
 
-          <ListItem
+          {/* <ListItem
             title={Locale.Settings.Token.Title}
             subTitle={Locale.Settings.Token.SubTitle}
           >
@@ -426,9 +426,9 @@ export function Settings() {
                 accessStore.updateToken(e.currentTarget.value);
               }}
             />
-          </ListItem>
+          </ListItem> */}
 
-          <ListItem
+          {/* <ListItem
             title={Locale.Settings.Usage.Title}
             subTitle={
               showUsage
@@ -450,7 +450,7 @@ export function Settings() {
                 onClick={() => checkUsage(true)}
               />
             )}
-          </ListItem>
+          </ListItem> */}
         </List>
 
         <List>
