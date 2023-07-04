@@ -28,7 +28,7 @@ ChatGPT-Next-Web</a>项目进行修改而得，另外本项目需要的后端服
 * 修改.env.local的CODE，如果为空，则表示不需要密码访问
 * yarn install && yarn build && yarn start
 
->如果不是同一机器上部署pandora项目和本项目，又或者部署pandora项目使用非8008端口，那需要修改本项目用到8008端口的url
+>PS：如果不是同一机器上部署pandora项目和本项目，又或者部署pandora项目使用非8008端口，那需要修改本项目用到8008端口的url
 
 
 
