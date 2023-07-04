@@ -3,6 +3,17 @@
 ChatGPT-Next-Web</a>项目进行修改而得，另外本项目需要的后端服务，需要部署<a href="https://github.com/pengzhile/pandora" target="_blank" title="pandora项目">pandora项目</a>
 
 
+## 主要功能
+![Image text](https://github.com/xueandyue/ChatGPT-3.5-AccessToken-Web/blob/main/doc/images/index.jpg)
+
+- 完整的 Markdown 支持：LaTex 公式、Mermaid 流程图、代码高亮等等
+- 精心设计的 UI，响应式设计，支持深色模式，支持 PWA
+- 极快的首屏加载速度（~100kb），支持流式响应
+- 隐私安全，所有数据保存在用户浏览器本地
+- 预制角色功能（面具），方便地创建、分享和调试你的个性化对话
+- 海量的内置 prompt 列表
+- 多国语言支持
+
 ## Access Token
 
 * chatgpt官方登录，然后访问 [这里](http://chat.openai.com/api/auth/session) 拿 `Access Token`
