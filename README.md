@@ -34,6 +34,7 @@ ChatGPT-Next-Web</a>项目进行修改而得，另外本项目需要的后端服
 * pip install .
 * pandora -s -t token.txt
 > 部署本项目
+* 安装yarn
 * 下载本项目：git clone https://github.com/xueandyue/ChatGPT-3.5-AccessToken-Web.git
 * cd ChatGPT-3.5-AccessToken-Web
 * 修改.env.local的CODE，如果为空，则表示不需要密码访问
