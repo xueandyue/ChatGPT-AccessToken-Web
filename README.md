@@ -1,5 +1,5 @@
 # ChatGPT-3.5-AccessToken-Web
-本项目基于使用Access Token的方式实现了网页版 ChatGPT的前端，不需要openai的api额度，是用<a href="https://github.com/Yidadaa/ChatGPT-Next-Web" target="_blank" title="ChatGPT-Next-Web">
+本项目基于使用Access Token的方式实现了网页版 ChatGPT 3.5的前端，不需要openai的api额度，是用<a href="https://github.com/Yidadaa/ChatGPT-Next-Web" target="_blank" title="ChatGPT-Next-Web">
 ChatGPT-Next-Web</a>项目进行修改而得，另外本项目需要的后端服务，需要部署<a href="https://github.com/pengzhile/pandora" target="_blank" title="pandora项目">pandora项目</a>
 
 
@@ -20,6 +20,8 @@ ChatGPT-Next-Web</a>项目进行修改而得，另外本项目需要的后端服
 * 也可以访问 [这里](http://ai-20230626.fakeopen.com/auth) 拿 `Access Token`
 * `Access Token` 有效期 `14` 天，期间访问**不需要梯子**。这意味着你在手机上也可随意使用。
 
+## 计划事项
+* 支持docker部署，待完成
 
 ## 部署机器说明
 * 在本地或者国内服务器都可以部署，不需要海外服务器
@@ -54,5 +56,5 @@ ChatGPT-Next-Web</a>项目进行修改而得，另外本项目需要的后端服
 
 
 * 项目是站在其他巨人的肩膀上，感谢！
-* 喜欢的可以给颗星
-* PHP是世界上最好的编程语言！
+* 喜欢的请给颗星，，感谢！
+* 不影响PHP是世界上最好的编程语言！
