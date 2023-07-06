@@ -20,13 +20,22 @@ ChatGPT-Next-Web</a>项目进行修改而得，另外本项目需要的后端服
 * 也可以访问 [这里](http://ai-20230626.fakeopen.com/auth) 拿 `Access Token`
 * `Access Token` 有效期 `14` 天，期间访问**不需要梯子**。这意味着你在手机上也可随意使用。
 
-## 计划事项
-* 支持docker部署，待完成
+
 
 ## 部署机器说明
 * 在本地或者国内服务器都可以部署，不需要海外服务器
 
-## 如何搭建运行
+
+## 部署
+* 确保安装了docker，启动了docker
+* ${ACCESS_TOKEN}是ACCESS_TOKEN的值，${CODE}是设置密码，如果CODE=""则表示不设置密码
+* docker pull xueandyue/next-web-pandora:v1
+* docker run -e ACCESS_TOKEN="${ACCESS_TOKEN}" -e CODE="${CODE}" -p 3000:3000 -d xueandyue/next-web-pandora:v1
+* 在浏览器访问http://服务器域名(ip):3000/
+
+
+
+## 本地如何调试
 * 部署的机器安装python3,推荐python3.9 ,至少要python3.7以上版本
 * 获取 Access Token
 > 部署pandora项目
@@ -40,7 +49,8 @@ ChatGPT-Next-Web</a>项目进行修改而得，另外本项目需要的后端服
 * 下载本项目：git clone https://github.com/xueandyue/ChatGPT-3.5-AccessToken-Web.git
 * cd ChatGPT-3.5-AccessToken-Web
 * 修改.env.local的CODE，如果为空，则表示不需要密码访问
-* yarn install && yarn build && yarn start
+* yarn install && yarn dev
+* 在浏览器访问http://localhost:3000/
 
 >PS：如果不是同一机器上部署pandora项目和本项目，又或者部署pandora项目使用非8008端口，那需要修改本项目用到8008端口的url
 
