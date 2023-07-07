@@ -63,7 +63,7 @@ export async function requestOpenai(req: NextRequest) {
       prompt: prompt,
       message_id: message_id,
       parent_message_id: parent_message_id,
-      model: "text-davinci-002-render-sha",
+      model: "gpt-4-mobile",
       timezone_offset_min: -480,
     };
 
@@ -83,7 +83,7 @@ export async function requestOpenai(req: NextRequest) {
     const message_id = req.headers.get("pid");
     let senddata = {
       message_id: message_id,
-      model: "text-davinci-002-render-sha",
+      model: "gpt-4-mobile",
     };
     let titlejson = {
       object: "chat.completion",
