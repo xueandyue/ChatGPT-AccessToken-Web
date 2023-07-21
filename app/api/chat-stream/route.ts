@@ -31,35 +31,34 @@ async function createStream(req: NextRequest) {
           }
           try {
             const json = JSON.parse(data);
-            if (json.message.author.role === "assistant") {
-              let text = json.message.content.parts[0];
-              text = text.trim();
-              if (text != "") {
-                if (text != temptext) {
-                  let queue = encoder.encode();
-                  const pid = json.message.id;
-                  const cid = json.conversation_id;
-                  const partSplitter = "-|||-";
-                  const resultText = text.replace(temptext, "");
-                  if (start && pid && cid) {
-                    start = false;
-                    queue = encoder.encode(
-                      `${pid}&${cid}${partSplitter}${resultText}`,
-                    );
-                  } else {
-                    queue = encoder.encode(resultText);
+
+            if (json.hasOwnProperty("message")) {
+              if (json.message.author.role === "assistant") {
+                let text = json.message.content.parts[0];
+                text = text.trim();
+                if (text != "") {
+                  if (text != temptext) {
+                    let queue = encoder.encode();
+                    const pid = json.message.id;
+                    const cid = json.conversation_id;
+                    const partSplitter = "-|||-";
+                    const resultText = text.replace(temptext, "");
+                    if (start && pid && cid) {
+                      start = false;
+                      queue = encoder.encode(
+                        `${pid}&${cid}${partSplitter}${resultText}`,
+                      );
+                    } else {
+                      queue = encoder.encode(resultText);
+                    }
+                    controller.enqueue(queue);
+                    temptext = text;
                   }
-                  controller.enqueue(queue);
-                  temptext = text;
                 }
               }
-            }
 
-            // const itemSplitter = "-|;|-";
-            // const partSplitter = "-|||-";
-            // const queue = encoder.encode(
-            //   `${json.id || ""}${itemSplitter}${text}${partSplitter}`,
-            // );
+            } else {
+            }
           } catch (e) {
             controller.error(e);
           }
