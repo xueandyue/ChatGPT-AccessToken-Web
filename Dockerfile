@@ -36,6 +36,6 @@ EXPOSE 8008
 # 环境变量
 ENV ACCESS_TOKEN=YourToken CODE=YourCode
 
-CMD sh -c 'echo "${ACCESS_TOKEN}" > /app/pandora/token.txt && cd /app/pandora && pandora -s 0.0.0.0:8008 -t token.txt & cd /app/ChatGPT-3.5-AccessToken-Web && yarn start'
+CMD sh -c 'echo "${ACCESS_TOKEN}" > /app/pandora/token.txt && cd /app/pandora && pandora -s 0.0.0.0:8008 -t token.txt & cd /app/ChatGPT-3.5-AccessToken-Web && git pull && yarn build && yarn start'
 
 
