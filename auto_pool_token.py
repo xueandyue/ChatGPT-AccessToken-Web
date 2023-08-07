@@ -17,7 +17,7 @@ def run():
     current_dir = path.dirname(path.abspath(__file__))
     credentials_file = path.join(current_dir, 'user.txt')
 
-    tokens_file = parent_path+'/pandora/token.txt'
+    tokens_file = '/app/pandora/token.txt'
 
     with open(credentials_file, 'r', encoding='utf-8') as f:
         credentials = f.read().split('\n')
