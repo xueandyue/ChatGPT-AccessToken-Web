@@ -8,9 +8,9 @@ def restart():
     
     # 执行python3 auto_pool_token.py命令
     os.system('python3 /app/ChatGPT-3.5-AccessToken-Web/auto_pool_token.py')
-    os.system('cd /app/pandora')
+    # os.system('cd /app/pandora')
     # 执行yarn pandora -s -t tokens.txt &命令
-    os.system('nohup pandora -s 0.0.0.0:8008 -t token.txt > output.log 2>&1 &')
+    # os.system('nohup pandora -s 0.0.0.0:8008 -t token.txt > output.log 2>&1 &')
     
     print('Commands executed successfully!')
 
