@@ -7,7 +7,7 @@ ChatGPT-Next-Web</a>项目进行修改而得，另外本项目需要的后端服
 
 ## 主要功能
 ![Image text](https://github.com/xueandyue/ChatGPT-3.5-AccessToken-Web/blob/main/doc/images/index.jpg)
-
+- 自动更新Access Token，解决了pandora需要14天重新获取Access Token、重启服务的痛点
 - 完整的 Markdown 支持：LaTex 公式、Mermaid 流程图、代码高亮等等
 - 精心设计的 UI，响应式设计，支持深色模式，支持 PWA
 - 极快的首屏加载速度（~100kb），支持流式响应
@@ -16,11 +16,10 @@ ChatGPT-Next-Web</a>项目进行修改而得，另外本项目需要的后端服
 - 海量的内置 prompt 列表
 - 多国语言支持
 
-## Access Token
+## 账号，密码
 
-* chatgpt官方登录，然后访问 [这里](http://chat.openai.com/api/auth/session) 拿 `Access Token`
-* 也可以访问 [这里](http://ai-20230626.fakeopen.com/auth) 拿 `Access Token`
-* `Access Token` 有效期 `14` 天，期间访问**不需要梯子**。这意味着你在手机上也可随意使用。
+* 只支持chatgpt官方账号，不支持Google,Microsoft,apple第三方登录
+* 也可以访问 [这里](http://ai-20230626.fakeopen.com/auth)验证账号密码。期间访问**不需要梯子**。这意味着你在手机上也可随意使用。
 
 
 
