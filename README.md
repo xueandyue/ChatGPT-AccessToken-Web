@@ -19,7 +19,7 @@ ChatGPT-Next-Web</a>项目进行修改而得，另外本项目需要的后端服
 ## 账号，密码
 
 * 只支持chatgpt官方账号，不支持Google,Microsoft,apple第三方登录
-* 也可以访问 [这里](http://ai-20230626.fakeopen.com/auth)验证账号密码。期间访问**不需要梯子**。这意味着你在手机上也可随意使用。
+* 也可以访问 [这里](https://ai-20230626.fakeopen.com/auth1)验证账号密码。期间访问**不需要梯子**。这意味着你在手机上也可随意使用。
 
 
 
