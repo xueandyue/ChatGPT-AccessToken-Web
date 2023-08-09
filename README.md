@@ -28,6 +28,7 @@ ChatGPT-Next-Web</a>项目进行修改而得，另外本项目需要的后端服
 
 
 ## 部署
+* 确保有chatgpt官方账号
 * 确保安装了docker，启动了docker
 * ${username}是账号的值，${password}是账号的密码，${CODE}是设置密码，如果CODE=""则表示不设置密码
 * docker pull xueandyue/next-web-pandora:latest
