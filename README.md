@@ -37,7 +37,7 @@ ChatGPT-Next-Web</a>项目进行修改而得，另外本项目需要的后端服
 
 
 
-## 本地如何调试
+## 本地如何二次开发调试
 * 本地安装python3,推荐python3.9 ,至少要python3.7以上版本
 * 获取 Access Token
 > 部署pandora项目
