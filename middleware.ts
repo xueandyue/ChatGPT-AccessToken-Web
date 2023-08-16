@@ -27,7 +27,7 @@ function getIP(req: NextRequest) {
 }
 
 function getIP2(req: NextRequest) {
-  let ip = req.ip ?? req.headers.get("x-real-ip");
+  let ip = "";
   console.log("ip: ",ip)
   const forwardedFor = req.headers.get("x-forwarded-for");
   console.log("forwardedFor: ",forwardedFor);
