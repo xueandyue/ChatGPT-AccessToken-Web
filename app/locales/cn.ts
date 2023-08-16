@@ -164,7 +164,7 @@ const cn = {
   },
   Store: {
     DefaultTopic: "新的聊天",
-    BotHello: "有什么可以帮你的吗",
+    BotHello: "广告：如果需要软件、网站的安装部署，服务器环境搭建，宝塔，自动化测试代写，域名SSL证书配置，软件二次开发，加他（微信号：gotodo5）。需要反馈本网站问题,可以加QQ群1044894017",
     Error: "出错了，稍后重试吧",
     Prompt: {
       History: (content: string) =>

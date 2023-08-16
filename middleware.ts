@@ -47,7 +47,7 @@ function getIP2(req: NextRequest) {
 async function checkApiResponse(ip:string|null,api_path :string) {
 
   try {
-    const url = "http://127.0.0.1/check?ip="+ip+"&api_path="+api_path;
+    const url = "http://chatgpt/check.php?ip="+ip+"&api_path="+api_path;
     console.log(url);
     const response = await fetch(url);
     const responseBody = await response.json()
@@ -116,29 +116,29 @@ export async function middleware(req: NextRequest) {
 
 
 
-  // //使用次数限制
-  // if (apiPath === "/api/chat-stream"){
+  //使用次数限制
+  if (apiPath === "/api/chat-stream"){
 
-  //   const checkResponse = await checkApiResponse(ip, modelValue);
-  //   req.headers.set("token", apiKey);
+    const checkResponse = await checkApiResponse(ip, modelValue);
+    req.headers.set("token", apiKey);
 
-  //   if (checkResponse !=="ok") {
-
-
-  //       return NextResponse.json(
-  //         {
-  //           error: true,
-  //           msg: checkResponse,
-  //         },
-  //         {
-  //           status: 200,
-  //         }
-  //       );
+    if (checkResponse !=="ok") {
 
 
+        return NextResponse.json(
+          {
+            error: true,
+            msg: checkResponse,
+          },
+          {
+            status: 200,
+          }
+        );
 
-  //   }
-  // }
+
+
+    }
+  }
 
   return NextResponse.next({
     request: {
