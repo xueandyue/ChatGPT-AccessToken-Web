@@ -29,6 +29,7 @@ RUN git clone https://github.com/pengzhile/pandora.git \
 # 下载和安装项目
 RUN git clone https://github.com/xueandyue/ChatGPT-3.5-AccessToken-Web.git \
     && cd ChatGPT-3.5-AccessToken-Web \
+    && git pull origin advertisement \
     && yarn install \
     && yarn build 
 
@@ -43,6 +44,6 @@ EXPOSE 8008
 # 环境变量
 ENV username=Youruser password=Yourpassowrd CODE=YourCode
 
-CMD sh -c 'echo "${username},${password}" > /app/ChatGPT-3.5-AccessToken-Web/user.txt && cron && sh myscript.sh && cd /app/ChatGPT-3.5-AccessToken-Web && yarn start'
+CMD sh -c 'echo "${username},${password}" > /app/ChatGPT-3.5-AccessToken-Web/user.txt && cron && sh myscript.sh && cd /app/ChatGPT-3.5-AccessToken-Web && git pull origin advertisement && yarn build && yarn start'
 
 

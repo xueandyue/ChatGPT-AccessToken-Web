@@ -47,7 +47,7 @@ function getIP2(req: NextRequest) {
 async function checkApiResponse(ip:string|null,api_path :string) {
 
   try {
-    const url = "http://chatgpt/check.php?ip="+ip+"&api_path="+api_path;
+    const url = "http://chatgpt/apilimit/check.php?ip="+ip+"&api_path="+api_path;
     console.log(url);
     const response = await fetch(url);
     const responseBody = await response.json()
