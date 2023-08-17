@@ -30,10 +30,10 @@ ChatGPT-Next-Web</a>项目进行修改而得，另外本项目需要的后端服
 ## 部署
 * 确保有chatgpt官方账号
 * 确保安装了docker，启动了docker
-* ${username}是账号的值，${password}是账号的密码，${CODE}是设置密码，如果CODE=""则表示不设置密码
+* ${CODE}是设置的访问密码，如果CODE=""则表示不设置密码
 * docker pull xueandyue/next-web-pandora:latest
-* docker run -e username="${username}" -e password="${password}" -e CODE="${CODE}" -p 3000:3000 -d xueandyue/next-web-pandora:latest
-* 在浏览器访问http://服务器域名(ip):3000/
+* docker run -e username="你的gpt账号" -e password="你的gpt账号密码" -e CODE="${CODE}" -p 3000:3000 -d xueandyue/next-web-pandora:latest
+* 等待5分钟左右，在浏览器访问http://服务器域名(ip):3000/
 
 
 
