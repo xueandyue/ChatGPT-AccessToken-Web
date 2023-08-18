@@ -35,6 +35,8 @@ ChatGPT-Next-Web</a>项目进行修改而得，另外本项目需要的后端服
 * docker run -e username="你的gpt账号" -e password="你的gpt账号密码" -e CODE="${CODE}" -p 3000:3000 -d xueandyue/next-web-pandora:latest
 * 等待5分钟左右，在浏览器访问http://服务器域名(ip):3000/
 
+## 不支持的部署方式
+* 不支持k8s部署和Vercel部署
 
 
 ## 本地如何二次开发调试
