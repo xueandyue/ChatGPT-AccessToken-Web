@@ -17,6 +17,14 @@ ChatGPT-Next-Web</a>项目进行修改而得，另外本项目需要的后端服
 - 海量的内置 prompt 列表
 - 多国语言支持
 
+
+## Access Token
+
+* chatgpt官方登录，然后访问 [这里](http://chat.openai.com/api/auth/session) 拿 `Access Token`
+* 也可以访问 [这里](http://ai-20230626.fakeopen.com/auth) 拿 `Access Token`
+
+
+
 ## 账号，密码
 
 * 只支持chatgpt官方账号，不支持Google,Microsoft,apple第三方登录
@@ -28,13 +36,22 @@ ChatGPT-Next-Web</a>项目进行修改而得，另外本项目需要的后端服
 * 在本地或者国内服务器都可以部署，不需要海外服务器
 
 
-## 部署
+## 部署一(利用账号和密码部署)
 * 确保有chatgpt官方账号
 * 确保安装了docker，启动了docker
 * CODE是设置的访问密码，如果CODE=""则表示不设置密码，如果CODE="123456",则设置密码为123456
 * docker pull xueandyue/next-web-pandora:latest
 * docker run -e username="你的gpt账号" -e password="你的gpt账号密码" -e CODE="123456" -p 3000:3000 -d xueandyue/next-web-pandora:latest
 * 等待5分钟左右，在浏览器访问http://服务器域名(ip):3000/
+
+## 备用部署(利用access_token)
+* 确保安装了docker，启动了docker
+* docker pull xueandyue/next-web-pandora:accessToken
+* docker run -e ACCESS_TOKEN="你的access_token" -e CODE="要设置的访问密码" -p 3000:3000 -d xueandyue/next-web-pandora:accessToken
+* 如果CODE=""则表示不设置密码
+* 在浏览器访问http://服务器域名(ip):3000/
+* 等待5分钟左右，在浏览器访问http://服务器域名(ip):3000/
+
 
 ## 不支持的部署方式
 * 不支持k8s部署和Vercel部署
