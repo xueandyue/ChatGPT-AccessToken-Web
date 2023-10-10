@@ -2,7 +2,7 @@
 本项目基于使用Access Token的方式实现了网页版 ChatGPT 3.5的前端，不需要openai的api额度，是用<a href="https://github.com/Yidadaa/ChatGPT-Next-Web" target="_blank" title="ChatGPT-Next-Web">
 ChatGPT-Next-Web</a>项目进行修改而得，另外本项目需要的后端服务，集成了<a href="https://github.com/pengzhile/pandora" target="_blank" title="pandora项目">pandora项目</a>
 # 示例网站
-<a href="http://43.136.103.186:3000/" target="_blank" title="示例网站">点击这里查看示例网站</a>
+<a href="https://www.aichatgpt5.com/" target="_blank" title="示例网站">点击这里查看示例网站</a>
 
 
 ## 主要功能
