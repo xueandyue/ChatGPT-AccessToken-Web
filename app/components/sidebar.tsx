@@ -100,7 +100,7 @@ export function SideBar(props: { className?: string }) {
         <div className={styles["sidebar-sub-title"]}>
           本站承诺：隐私安全，所有对话数据只保存在用户浏览器
           <br />
-          本站使用的模型是：chatgpt官网的GPT-3.5模型
+          本站使用的模型是：chatgpt官网的GPT-4模型
         </div>
         <div className={styles["sidebar-logo"] + " no-dark"}>
           <ChatGptIcon />
