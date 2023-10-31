@@ -1,6 +1,6 @@
 # ChatGPT-3.5-AccessToken-Web
 本项目基于使用Access Token的方式实现了网页版 ChatGPT 3.5的前端，不需要openai的api额度，是用<a href="https://github.com/Yidadaa/ChatGPT-Next-Web" target="_blank" title="ChatGPT-Next-Web">
-ChatGPT-Next-Web</a>项目进行修改而得，另外本项目需要的后端服务是<a href="https://github.com/pengzhile/pandora" target="_blank" title="pandora项目">pandora项目</a>
+ChatGPT-Next-Web</a>项目进行修改而得，另外本项目需要的后端服务是<a href="https://github.com/zhile-io/pandora" target="_blank" title="pandora项目">pandora项目</a>
 # 示例网站
 <a href="https://www.aichatgpt5.com/" target="_blank" title="示例网站">点击这里查看示例网站</a>
 
@@ -61,7 +61,7 @@ ChatGPT-Next-Web</a>项目进行修改而得，另外本项目需要的后端服
 * 本地安装python3,推荐python3.9 ,至少要python3.7以上版本
 * 获取 Access Token
 > 部署pandora项目
-* 下载pandora项目：git clone https://github.com/pengzhile/pandora.git
+* 下载pandora项目：git clone https://github.com/zhile-io/pandora
 * cd pandora
 * 新建token.txt文件，把获取到的 Access Token放进去，保存文件
 * pip install .
