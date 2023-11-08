@@ -18,6 +18,9 @@ ChatGPT-Next-Web</a>项目进行修改而得，另外本项目需要的后端服
 - 多国语言支持
 
 
+## 下一步计划
+* 支持vercel部署，进度：0% 
+
 ## Access Token
 
 * chatgpt官方登录，然后访问 [这里](http://chat.openai.com/api/auth/session) 拿 `Access Token`
