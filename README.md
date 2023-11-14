@@ -1,6 +1,7 @@
-# ChatGPT-3.5-AccessToken-Web
-本项目基于使用Access Token的方式实现了网页版 ChatGPT 3.5的前端，不需要openai的api额度，是用<a href="https://github.com/Yidadaa/ChatGPT-Next-Web" target="_blank" title="ChatGPT-Next-Web">
-ChatGPT-Next-Web</a>项目进行修改而得，另外本项目需要的后端服务是<a href="https://github.com/zhile-io/pandora" target="_blank" title="pandora项目">pandora项目</a>
+# ChatGPT-AccessToken-Web
+本项目基于使用Access Token的方式实现了网页版 ChatGPT的前端，不需要openai的api额度，是用<a href="https://github.com/Yidadaa/ChatGPT-Next-Web" target="_blank" title="ChatGPT-Next-Web">
+ChatGPT-Next-Web</a>项目进行修改而得，默认Main分支对接gpt3.5的模型，gpt4分支对接gpt4模型。另外本项目需要的后端服务是<a href="https://github.com/zhile-io/pandora" target="_blank" title="pandora项目">pandora项目</a>
+项目是站在ChatGPT-Next-Web和pandora项目的作者肩膀上，感谢他们！
 # 示例网站
 <a href="https://www.aichatgpt5.com/" target="_blank" title="示例网站">点击这里查看示例网站</a>
 
@@ -37,7 +38,7 @@ ChatGPT-Next-Web</a>项目进行修改而得，另外本项目需要的后端服
 
 
 ## 部署机器说明
-* 在本地或者国内服务器都可以部署，不需要海外服务器
+* 在本地或者国内服务器都可以部署，不需要海外服务器。提供的docker镜像，是基于默认的Main分支（gpt3.5模型）
 
 
 ## 部署一(利用账号和密码部署)
