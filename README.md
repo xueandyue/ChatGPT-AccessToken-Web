@@ -26,7 +26,8 @@ ChatGPT-Next-Web</a>项目进行修改而得，另外本项目需要的后端服
 * chatgpt官方登录，然后访问 [这里](http://chat.openai.com/api/auth/session) 拿 `Access Token`
 * 也可以访问 [这里](http://ai-20230626.fakeopen.com/auth) 拿 `Access Token`
 
-
+## 关于GPT Plus
+* 本项目有个gpt4分支，但后续该分支不会更新
 
 ## 账号，密码
 
