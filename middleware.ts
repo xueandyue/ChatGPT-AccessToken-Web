@@ -13,7 +13,7 @@ export const config = {
 const serverConfig = getServerSideConfig();
 let apiKey = "";
 console.log("key",serverConfig.apiKey );
-
+apiKey = serverConfig.apiKey
 function getIP(req: NextRequest) {
   let ip = req.ip ?? req.headers.get("x-real-ip");
   console.log("ip: ",ip)
@@ -110,7 +110,7 @@ export async function middleware(req: NextRequest) {
   }
 
   if (apiPath === "/api/openai"){
-    req.headers.set("path","api/conversation/gen_title")
+    req.headers.set("path","backend-api/conversation/gen_title")
   }
 
 

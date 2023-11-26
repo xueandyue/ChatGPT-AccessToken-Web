@@ -1,11 +1,14 @@
-# ChatGPT-3.5-AccessToken-Web
-本项目基于使用Access Token的方式实现了网页版 ChatGPT 3.5的前端，不需要openai的api额度，是用<a href="https://github.com/Yidadaa/ChatGPT-Next-Web" target="_blank" title="ChatGPT-Next-Web">
-ChatGPT-Next-Web</a>项目进行修改而得，另外本项目需要的后端服务，需要部署<a href="https://github.com/pengzhile/pandora" target="_blank" title="pandora项目">pandora项目</a>
+# ChatGPT-AccessToken-Web（最近pandora服务更新了，接口也发生了变化，没有及时去适配。本项目暂时不可用）
+本项目基于使用Access Token的方式实现了网页版 ChatGPT的前端，不需要openai的api额度，是用<a href="https://github.com/Yidadaa/ChatGPT-Next-Web" target="_blank" title="ChatGPT-Next-Web">
+ChatGPT-Next-Web</a>项目进行修改而得，默认Main分支对接gpt3.5的模型，gpt4分支对接gpt4模型。另外本项目需要的后端服务是<a href="https://github.com/zhile-io/pandora" target="_blank" title="pandora项目">pandora项目</a>
+项目是站在ChatGPT-Next-Web和pandora项目的作者肩膀上，感谢他们！
+# 示例网站
+<a href="https://www.aichatgpt5.com/" target="_blank" title="示例网站">点击这里查看示例网站</a>
 
 
 ## 主要功能
 ![Image text](https://github.com/xueandyue/ChatGPT-3.5-AccessToken-Web/blob/main/doc/images/index.jpg)
-
+- 不需要openai的api额度，解决了api体验额度（1分钟只能调用3次api）用完后，频繁买号更改apikey，重启服务的痛点，成本更低
 - 完整的 Markdown 支持：LaTex 公式、Mermaid 流程图、代码高亮等等
 - 精心设计的 UI，响应式设计，支持深色模式，支持 PWA
 - 极快的首屏加载速度（~100kb），支持流式响应
@@ -14,45 +17,48 @@ ChatGPT-Next-Web</a>项目进行修改而得，另外本项目需要的后端服
 - 海量的内置 prompt 列表
 - 多国语言支持
 
+
+## 下一步计划
+* 支持vercel部署，进度：0% 
+
 ## Access Token
 
 * chatgpt官方登录，然后访问 [这里](http://chat.openai.com/api/auth/session) 拿 `Access Token`
 * 也可以访问 [这里](http://ai-20230626.fakeopen.com/auth) 拿 `Access Token`
-* `Access Token` 有效期 `14` 天，期间访问**不需要梯子**。这意味着你在手机上也可随意使用。
+
+## 关于GPT Plus
+* 本项目有个gpt4分支，但后续该分支不会更新
+
+## 账号，密码
+
+* 只支持chatgpt官方账号，不支持Google,Microsoft,apple第三方登录
+* 也可以访问 [这里](https://ai-20230626.fakeopen.com/auth1)验证账号密码。期间访问**不需要梯子**。这意味着你在手机上也可随意使用。
 
 
 
 ## 部署机器说明
-* 在本地或者国内服务器都可以部署，不需要海外服务器
+* 在本地或者国内服务器都可以部署，不需要海外服务器。提供的docker镜像，是基于默认的Main分支（gpt3.5模型）
 
 
-## 部署
+## 部署一(利用账号和密码部署)暂时不可用，恢复日期待定
+* 确保有chatgpt官方账号
 * 确保安装了docker，启动了docker
-* ${ACCESS_TOKEN}是ACCESS_TOKEN的值，${CODE}是设置密码，如果CODE=""则表示不设置密码
-* docker pull xueandyue/next-web-pandora:v1
-* docker run -e ACCESS_TOKEN="${ACCESS_TOKEN}" -e CODE="${CODE}" -p 3000:3000 -d xueandyue/next-web-pandora:v1
+* CODE是设置的访问密码，如果CODE=""则表示不设置密码，如果CODE="123456",则设置密码为123456
+* docker pull xueandyue/next-web-pandora:latest
+* docker run -e username="你的gpt账号" -e password="你的gpt账号密码" -e CODE="123456" -p 3000:3000 -d xueandyue/next-web-pandora:latest
+* 等待5分钟左右，在浏览器访问http://服务器域名(ip):3000/
+
+## 备用部署(利用access_token)
+* 确保安装了docker，启动了docker
+* docker pull xueandyue/next-web-pandora:accessToken
+* docker run -e ACCESS_TOKEN="你的access_token" -e CODE="要设置的访问密码" -p 3000:3000 -d xueandyue/next-web-pandora:accessToken
+* 如果CODE=""则表示不设置密码
 * 在浏览器访问http://服务器域名(ip):3000/
+* 等待5分钟左右，在浏览器访问http://服务器域名(ip):3000/
 
 
-
-## 本地如何调试
-* 部署的机器安装python3,推荐python3.9 ,至少要python3.7以上版本
-* 获取 Access Token
-> 部署pandora项目
-* 下载pandora项目：git clone https://github.com/pengzhile/pandora.git
-* cd pandora
-* 新建token.txt文件，把获取到的 Access Token放进去，保存文件
-* pip install .
-* pandora -s -t token.txt
-> 部署本项目
-* 安装yarn
-* 下载本项目：git clone https://github.com/xueandyue/ChatGPT-3.5-AccessToken-Web.git
-* cd ChatGPT-3.5-AccessToken-Web
-* 修改.env.local的CODE，如果为空，则表示不需要密码访问
-* yarn install && yarn dev
-* 在浏览器访问http://localhost:3000/
-
->PS：如果不是同一机器上部署pandora项目和本项目，又或者部署pandora项目使用非8008端口，那需要修改本项目用到8008端口的url
+## 不支持的部署方式
+* 不支持k8s部署和Vercel部署
 
 
 
