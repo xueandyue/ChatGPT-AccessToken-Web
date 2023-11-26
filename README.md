@@ -9,7 +9,6 @@ ChatGPT-Next-Web</a>项目进行修改而得，默认Main分支对接gpt3.5的�
 ## 主要功能
 ![Image text](https://github.com/xueandyue/ChatGPT-3.5-AccessToken-Web/blob/main/doc/images/index.jpg)
 - 不需要openai的api额度，解决了api体验额度（1分钟只能调用3次api）用完后，频繁买号更改apikey，重启服务的痛点，成本更低
-- 自动更新Access Token，解决了pandora需要14天重新获取Access Token、重启服务的痛点
 - 完整的 Markdown 支持：LaTex 公式、Mermaid 流程图、代码高亮等等
 - 精心设计的 UI，响应式设计，支持深色模式，支持 PWA
 - 极快的首屏加载速度（~100kb），支持流式响应
@@ -41,7 +40,7 @@ ChatGPT-Next-Web</a>项目进行修改而得，默认Main分支对接gpt3.5的�
 * 在本地或者国内服务器都可以部署，不需要海外服务器。提供的docker镜像，是基于默认的Main分支（gpt3.5模型）
 
 
-## 部署一(利用账号和密码部署)
+## 部署一(利用账号和密码部署)暂时不可用，恢复日期待定
 * 确保有chatgpt官方账号
 * 确保安装了docker，启动了docker
 * CODE是设置的访问密码，如果CODE=""则表示不设置密码，如果CODE="123456",则设置密码为123456
@@ -60,26 +59,6 @@ ChatGPT-Next-Web</a>项目进行修改而得，默认Main分支对接gpt3.5的�
 
 ## 不支持的部署方式
 * 不支持k8s部署和Vercel部署
-
-
-## 本地如何二次开发调试
-* 本地安装python3,推荐python3.9 ,至少要python3.7以上版本
-* 获取 Access Token
-> 部署pandora项目
-* 下载pandora项目：git clone https://github.com/zhile-io/pandora
-* cd pandora
-* 新建token.txt文件，把获取到的 Access Token放进去，保存文件
-* pip install .
-* pandora -s -t token.txt
-> 部署本项目
-* 安装yarn
-* 下载本项目：git clone https://github.com/xueandyue/ChatGPT-3.5-AccessToken-Web.git
-* cd ChatGPT-3.5-AccessToken-Web
-* 修改.env.local的CODE，如果为空，则表示不需要密码访问
-* yarn install && yarn dev
-* 在浏览器访问http://localhost:3000/
-
->PS：如果不是同一机器上部署pandora项目和本项目，又或者部署pandora项目使用非8008端口，那需要修改本项目用到8008端口的url
 
 
 
