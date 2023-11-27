@@ -18,6 +18,7 @@ ChatGPT-Next-Web</a>项目进行修改而得，默认Main分支对接gpt3.5的�
 - 多国语言支持
 
 
+
 ## 下一步计划
 * 支持vercel部署，进度：0% 
 
@@ -49,6 +50,7 @@ ChatGPT-Next-Web</a>项目进行修改而得，默认Main分支对接gpt3.5的�
 * 等待5分钟左右，在浏览器访问http://服务器域名(ip):3000/
 
 ## 备用部署(利用access_token)
+![Image text](https://github.com/xueandyue/ChatGPT-3.5-AccessToken-Web/blob/main/doc/images/20231127090820.png)
 * 先获取Jwt的url, [在这里拿Jwturl](https://dash.pandoranext.com/) ，注意 Jwturl要去掉 "> license.jwt"部分
 * 确保安装了docker，启动了docker
 * docker pull xueandyue/next-web-pandora:accessToken
