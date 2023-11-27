@@ -1,6 +1,6 @@
-# ChatGPT-AccessToken-Web（最近pandora服务更新了，接口也发生了变化，没有及时去适配。本项目暂时不可用）
+# ChatGPT-AccessToken-Web
 本项目基于使用Access Token的方式实现了网页版 ChatGPT的前端，不需要openai的api额度，是用<a href="https://github.com/Yidadaa/ChatGPT-Next-Web" target="_blank" title="ChatGPT-Next-Web">
-ChatGPT-Next-Web</a>项目进行修改而得，默认Main分支对接gpt3.5的模型，gpt4分支对接gpt4模型。另外本项目需要的后端服务是<a href="https://github.com/zhile-io/pandora" target="_blank" title="pandora项目">pandora项目</a>
+ChatGPT-Next-Web</a>项目进行修改而得，默认Main分支对接gpt3.5的模型，gpt4分支对接gpt4模型。另外本项目需要的后端服务是pandora项目,
 项目是站在ChatGPT-Next-Web和pandora项目的作者肩膀上，感谢他们！
 # 示例网站
 <a href="https://www.aichatgpt5.com/" target="_blank" title="示例网站">点击这里查看示例网站</a>
@@ -49,9 +49,10 @@ ChatGPT-Next-Web</a>项目进行修改而得，默认Main分支对接gpt3.5的�
 * 等待5分钟左右，在浏览器访问http://服务器域名(ip):3000/
 
 ## 备用部署(利用access_token)
+* 先获取Jwt的url, [在这里拿Jwturl](https://dash.pandoranext.com/) ，注意 Jwturl要去掉 "> license.jwt"部分
 * 确保安装了docker，启动了docker
 * docker pull xueandyue/next-web-pandora:accessToken
-* docker run -e ACCESS_TOKEN="你的access_token" -e CODE="要设置的访问密码" -p 3000:3000 -d xueandyue/next-web-pandora:accessToken
+* docker run -e ACCESS_TOKEN="你的access_token" -e CODE="要设置的访问密码" -e Jwturl="你的Jwturl" -p 3000:3000 -d xueandyue/next-web-pandora:accessToken
 * 如果CODE=""则表示不设置密码
 * 在浏览器访问http://服务器域名(ip):3000/
 * 等待5分钟左右，在浏览器访问http://服务器域名(ip):3000/
