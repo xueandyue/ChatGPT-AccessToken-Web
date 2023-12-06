@@ -3,7 +3,7 @@
 ChatGPT-Next-Web</a>项目进行修改而得，默认Main分支对接gpt3.5的模型，gpt4分支对接gpt4模型。另外本项目需要的后端服务是pandora项目,
 项目是站在ChatGPT-Next-Web和pandora项目的作者肩膀上，感谢他们！
 # 示例网站
-<a href="43.136.103.186:3000/" target="_blank" title="示例网站">点击这里查看示例网站</a>
+<a href="http://43.136.103.186:3000/" target="_blank" title="示例网站">点击这里查看示例网站</a>
 
 
 ## 主要功能
