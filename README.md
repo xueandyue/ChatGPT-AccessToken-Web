@@ -67,8 +67,8 @@ pandoranext项目</a>,
 * 先获取License Id, [在这里拿License Id](https://dash.pandoranext.com/) 
   ![Image text](https://github.com/xueandyue/ChatGPT-3.5-AccessToken-Web/blob/main/doc/images/20231229.png)
 * 把项目的pandoranext-deploy.zip放在服务器上，然后解压,cd pandoranext-deploy
-* 在./data/config.json中把license_id的值设置为获取的License Id
-* 在./data/tokens.json中把token的值修改为获取到的access_token
+* 在./data/config.json中把license_id的值设置为获取的License Id ,其他字段的值不要改动!!
+* 在./data/tokens.json中把token的值修改为获取到的access_token ,其他字段的值不要改动!!
 * 确保安装了docker，启动了docker
 * docker network create my-net
 * docker pull pengzhile/pandora-next
