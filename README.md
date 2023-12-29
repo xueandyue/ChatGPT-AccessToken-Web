@@ -1,7 +1,8 @@
 # ChatGPT-AccessToken-Web
 本项目基于使用Access Token的方式实现了网页版 ChatGPT的前端，不需要openai的api额度，是用<a href="https://github.com/Yidadaa/ChatGPT-Next-Web" target="_blank" title="ChatGPT-Next-Web">
-ChatGPT-Next-Web</a>项目进行修改而得，默认Main分支对接gpt3.5的模型，gpt4分支对接gpt4模型。另外本项目需要的后端服务是pandora项目,
-项目是站在ChatGPT-Next-Web和pandora项目的作者肩膀上，感谢他们！
+ChatGPT-Next-Web</a>项目进行修改而得，默认Main分支对接gpt3.5的模型，gpt4分支对接gpt4模型。另外本项目需要的后端服务是<a href="https://github.com/pandora-next/deploy" target="_blank" title="pandoranext项目">
+pandoranext项目</a>,
+项目是站在ChatGPT-Next-Web和pandoranext项目的作者肩膀上，感谢他们！
 # 示例网站
 <a href="http://43.136.103.186:3000/" target="_blank" title="示例网站">点击这里查看示例网站</a>
 
@@ -20,7 +21,7 @@ ChatGPT-Next-Web</a>项目进行修改而得，默认Main分支对接gpt3.5的�
 
 
 ## 下一步计划
-* 支持vercel部署，进度：0% 
+* 无
 
 ## Access Token
 
@@ -49,7 +50,7 @@ ChatGPT-Next-Web</a>项目进行修改而得，默认Main分支对接gpt3.5的�
 * docker run -e username="你的gpt账号" -e password="你的gpt账号密码" -e CODE="123456" -p 3000:3000 -d xueandyue/next-web-pandora:latest
 * 等待5分钟左右，在浏览器访问http://服务器域名(ip):3000/
 
-## 备用部署(利用access_token)
+## 备用部署一(利用access_token)
 
 * 先获取Jwt的url, [在这里拿Jwturl](https://dash.pandoranext.com/) ，注意 Jwturl要去掉 "> license.jwt"部分
   ![Image text](https://github.com/xueandyue/ChatGPT-3.5-AccessToken-Web/blob/main/doc/images/20231127090820.png)
@@ -59,6 +60,26 @@ ChatGPT-Next-Web</a>项目进行修改而得，默认Main分支对接gpt3.5的�
 * 如果CODE=""则表示不设置密码
 * 在浏览器访问http://服务器域名(ip):3000/
 * 等待5分钟左右，在浏览器访问http://服务器域名(ip):3000/
+
+
+## 备用部署二(利用access_token，支持多系统架构)
+
+* 先获取License Id, [在这里拿License Id](https://dash.pandoranext.com/) 
+  ![Image text](https://github.com/xueandyue/ChatGPT-3.5-AccessToken-Web/blob/main/doc/images/20231229.png)
+* 把项目的pandoranext-deploy.zip放在服务器上，然后解压,cd pandoranext-deploy
+* 在./data/config.json中把license_id的值设置为获取的License Id
+* 在./data/tokens.json中把token的值修改为获取到的access_token
+* 确保安装了docker，启动了docker
+* docker network create my-net
+* docker pull pengzhile/pandora-next
+* (这里容器的名字一定要是PandoraNext，不要改) docker run -d --restart always --name PandoraNext --net=my-net  -v ./data:/data -v ./sessions:/root/.cache/PandoraNext pengzhile/pandora-next
+* docker pull xueandyue/next-web-pandora:accessToken2
+* docker run --network my-net -e ACCESS_TOKEN="你的access_toke" -e CODE="要设置的访问密码" -p 3000:3000 -d xueandyue/next-web-pandora:accessToken2
+* 如果CODE=""则表示不设置密码
+* 在浏览器访问http://服务器域名(ip):3000/
+* 等待5分钟左右，在浏览器访问http://服务器域名(ip):3000/
+
+
 
 
 ## 不支持的部署方式
