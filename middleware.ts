@@ -110,7 +110,7 @@ export async function middleware(req: NextRequest) {
   }
 
   if (apiPath === "/api/openai"){
-    req.headers.set("path","backend-api/conversation/gen_title")
+    req.headers.set("path","gpt12345/backend-api/conversation/gen_title")
   }
 
 
