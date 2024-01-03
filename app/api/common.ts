@@ -53,7 +53,7 @@ export async function requestOpenai(req: NextRequest) {
 
   let url = `${baseUrl}/${openaiPath}`;
   if (openaiPath === "v1/chat/completions") {
-    url = "http://127.0.0.1:8008/backend-api/conversation";
+    url = "http://8.134.200.247:8080/gpt12345/backend-api/conversation";
     // console.log(req.body);
     const requestBody = await req.json(); // 解析请求体中的 JSON 内容
     const len = requestBody.messages.length;
@@ -118,7 +118,7 @@ export async function requestOpenai(req: NextRequest) {
       method: req.method,
       body: JSON.stringify(senddata),
     });
-  } else if (openaiPath === "backend-api/conversation/gen_title") {
+  } else if (openaiPath === "gpt12345/backend-api/conversation/gen_title") {
     const conversation_id = req.headers.get("cid");
     const message_id = req.headers.get("pid");
     let senddata = {
@@ -144,7 +144,7 @@ export async function requestOpenai(req: NextRequest) {
         total_tokens: 367,
       },
     };
-    url = "http://127.0.0.1:8008/backend-api/conversation/gen_title/" + conversation_id;
+    url = "http://8.134.200.247:8080/gpt12345/backend-api/conversation/gen_title/" + conversation_id;
     return fetch(url, {
       headers: {
         "Content-Type": "application/json",
