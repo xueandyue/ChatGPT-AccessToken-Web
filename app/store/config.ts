@@ -54,13 +54,13 @@ const ENABLE_GPT4 = true;
 
 export const ALL_MODELS = [
   {
-    name: "gpt-3.5",
+    name: "gpt-4",
     available: true,
   },
   {
     name: "gpt-3.5-turbo",
     available: false,
-  },
+  }
 ] as const;
 
 export type ModelType = (typeof ALL_MODELS)[number]["name"];
