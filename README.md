@@ -52,7 +52,7 @@ pandoranext项目</a>,
 
 ## 备用部署一(利用access_token)
 
-* 先获取Jwt的url, [在这里拿Jwturl](https://dash.pandoranext.com/) ，注意 Jwturl要去掉 "> license.jwt"部分
+* 先获取Jwt的url, [在这里拿Jwturl](https://dash.pandoranext.com/)
   ![Image text](https://github.com/xueandyue/ChatGPT-3.5-AccessToken-Web/blob/main/doc/images/20231127090820.png)
 * 确保安装了docker，启动了docker
 * docker pull xueandyue/next-web-pandora:accessToken
