@@ -31,6 +31,7 @@ async function createStream(req: NextRequest) {
           }
           try {
             const json = JSON.parse(data);
+            console.log(json);
 
             if (json.hasOwnProperty("message")) {
               if (json.message.author.role === "assistant") {
@@ -41,7 +42,7 @@ async function createStream(req: NextRequest) {
                     let queue = encoder.encode();
                     const pid = json.message.id;
                     const cid = json.conversation_id;
-                    const partSplitter = "-|||-";
+                    const partSplitter = "-a|||c-";
                     const resultText = text.replace(temptext, "");
                     if (start && pid && cid) {
                       start = false;

@@ -252,7 +252,7 @@ export async function requestChatStream(
           break;
         }
         const textStr = decoder.decode(content.value, { stream: true });
-        const partSplitter = "-|||-";
+        const partSplitter = "-a|||c-";
         const itemSplitter = "&";
         const partArr = textStr.split(partSplitter);
 
@@ -276,7 +276,7 @@ export async function requestChatStream(
         responseText += textPart;
 
         // const itemSplitter = "-|;|-";
-        // const partSplitter = "-|||-";
+        // const partSplitter = "-a|||c-";
         // const partArr = textStr.split(partSplitter);
         // partArr.forEach((part) => {
         //   const tempArr = part.split(itemSplitter);

@@ -53,7 +53,7 @@ export async function requestOpenai(req: NextRequest) {
 
   let url = `${baseUrl}/${openaiPath}`;
   if (openaiPath === "v1/chat/completions") {
-    url = "http://8.134.200.247:8080/gpt12345/backend-api/conversation";
+    url = "http://PandoraNext:8080/gpt12345/backend-api/conversation";
     // console.log(req.body);
     const requestBody = await req.json(); // 解析请求体中的 JSON 内容
     const len = requestBody.messages.length;
@@ -110,6 +110,7 @@ export async function requestOpenai(req: NextRequest) {
       senddata.conversation_id = conversation_id;
     }
 
+
     return fetch(url, {
       headers: {
         "Content-Type": "application/json",
@@ -144,7 +145,8 @@ export async function requestOpenai(req: NextRequest) {
         total_tokens: 367,
       },
     };
-    url = "http://8.134.200.247:8080/gpt12345/backend-api/conversation/gen_title/" + conversation_id;
+    url = "http://PandoraNext:8080/gpt12345/backend-api/conversation/gen_title/" + conversation_id;
+
     return fetch(url, {
       headers: {
         "Content-Type": "application/json",
@@ -154,6 +156,7 @@ export async function requestOpenai(req: NextRequest) {
       body: JSON.stringify(senddata),
     });
   } else {
+
     return fetch(url, {
       headers: {
         "Content-Type": "application/json",

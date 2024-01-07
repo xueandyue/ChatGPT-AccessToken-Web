@@ -470,35 +470,6 @@ export const useChatStore = create<ChatStore>()(
           historyMsgLength,
           config.modelConfig.compressMessageLengthThreshold,
         );
-
-        if (
-          historyMsgLength >
-            config.modelConfig.compressMessageLengthThreshold &&
-          session.mask.modelConfig.sendMemory
-        ) {
-          requestChatStream(
-            toBeSummarizedMsgs.concat({
-              role: "system",
-              content: Locale.Store.Prompt.Summarize,
-              date: "",
-            }),
-            {
-              filterBot: false,
-              model: "gpt-3.5-turbo",
-              onMessage(message, done) {
-                session.memoryPrompt = message;
-                if (done) {
-                  console.log("[Memory] ", session.memoryPrompt);
-                  session.lastSummarizeIndex = lastSummarizeIndex;
-                }
-              },
-              onError(error) {
-                console.error("[Summarize] ", error);
-              },
-            },
-            sessionIndex,
-          );
-        }
       },
 
       updateStat(message) {
