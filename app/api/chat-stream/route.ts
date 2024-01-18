@@ -31,8 +31,6 @@ async function createStream(req: NextRequest) {
           }
           try {
             const json = JSON.parse(data);
-            console.log(json);
-
             if (json.hasOwnProperty("message")) {
               if (json.message.author.role === "assistant") {
                 let text = json.message.content.parts[0];

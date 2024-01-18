@@ -64,6 +64,21 @@ async function checkApiResponse(ip:string|null,api_path :string) {
 }
 
 
+async function gettoken() {
+
+  try {
+    const url = "http://127.0.0.1/getjson";
+    const response = await fetch(url);
+    const responseBody = await response.json()
+    apiKey=responseBody.token;
+    return apiKey;
+  } catch (err) {
+    console.error(err);
+    return "未知错误，请联系管理员";
+  }
+}
+
+
 
 export async function middleware(req: NextRequest) {
   const accessCode = req.headers.get("access-code");
@@ -117,28 +132,13 @@ export async function middleware(req: NextRequest) {
 
 
   // //使用次数限制
-  // if (apiPath === "/api/chat-stream"){
+  if (apiPath === "/api/chat-stream"){
 
-  //   const checkResponse = await checkApiResponse(ip, modelValue);
-  //   req.headers.set("token", apiKey);
-
-  //   if (checkResponse !=="ok") {
+    const temp = await gettoken();
+    req.headers.set("token", apiKey);
 
 
-  //       return NextResponse.json(
-  //         {
-  //           error: true,
-  //           msg: checkResponse,
-  //         },
-  //         {
-  //           status: 200,
-  //         }
-  //       );
-
-
-
-  //   }
-  // }
+  }
 
   return NextResponse.next({
     request: {
