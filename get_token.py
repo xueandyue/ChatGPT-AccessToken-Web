@@ -12,7 +12,7 @@ def run():
     current_dir = path.dirname(path.abspath(__file__))
     credentials_file = path.join(current_dir, 'user.txt')
 
-    tokens_file = './token.txt'
+    tokens_file = './.env.local'
 
     with open(credentials_file, 'r', encoding='utf-8') as f:
         credentials = f.read().split('\n')
@@ -39,7 +39,8 @@ def run():
 
 
     with open(tokens_file, 'w', encoding='utf-8') as f:
-            f.write('{}\n'.format(access_token))
+            f.write('OPENAI_API_KEY="')
+            f.write('{}"\n'.format(access_token))
 
 
 if __name__ == '__main__':
