@@ -12,7 +12,7 @@ def run():
     current_dir = path.dirname(path.abspath(__file__))
     credentials_file = path.join(current_dir, 'user.txt')
 
-    tokens_file = './.env.local'
+    tokens_file = '/app/ChatGPT-AccessToken-Web/.env.local'
 
     with open(credentials_file, 'r', encoding='utf-8') as f:
         credentials = f.read().split('\n')
