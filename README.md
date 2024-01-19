@@ -9,7 +9,7 @@ pandoranext项目</a>,
 
 ## 主要功能
 ![Image text](https://github.com/xueandyue/ChatGPT-3.5-AccessToken-Web/blob/main/doc/images/index.jpg)
-- 不需要openai的api额度，解决了api体验额度（1分钟只能调用3次api）用完后，频繁买号更改apikey，重启服务的痛点，成本更低
+- 不需要openai的api额度，解决了api体验额度（1分钟只能调用3次api）用完后，频繁买号更改apikey，的痛点，成本更低
 - 完整的 Markdown 支持：LaTex 公式、Mermaid 流程图、代码高亮等等
 - 精心设计的 UI，响应式设计，支持深色模式，支持 PWA
 - 极快的首屏加载速度（~100kb），支持流式响应
@@ -73,7 +73,7 @@ pandoranext项目</a>,
 * docker network create my-net
 * docker pull pengzhile/pandora-next
 * (这里容器的名字一定要是PandoraNext，不要改) docker run -d --restart always --name PandoraNext --net=my-net  -v ./data:/data -v ./sessions:/root/.cache/PandoraNext pengzhile/pandora-next
-* 如果是windows系统上用dockers，那要把./data 改成绝对路径
+* 如果是windows系统上用dockers，那要把./data 和 ./sessions 改成绝对路径
 * docker pull xueandyue/next-web-pandora:accessToken2
 * docker run --network my-net -e ACCESS_TOKEN="你的access_toke" -e CODE="要设置的访问密码" -p 3000:3000 -d xueandyue/next-web-pandora:accessToken2
 * 如果CODE=""则表示不设置密码
