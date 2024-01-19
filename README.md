@@ -42,12 +42,25 @@ pandoranext项目</a>,
 * 在本地或者国内服务器都可以部署，不需要海外服务器。提供的docker镜像，是基于默认的Main分支（gpt3.5模型）
 
 
-## 部署一(利用账号和密码部署)暂时不可用，预计2024.1.21修复
+## 部署一(利用账号和密码部署)
 * 确保有chatgpt官方账号
 * 确保安装了docker，启动了docker
-* CODE是设置的访问密码，如果CODE=""则表示不设置密码，如果CODE="123456",则设置密码为123456
+
+* 先获取License Id, [在这里拿License Id](https://dash.pandoranext.com/) 
+  ![Image text](https://github.com/xueandyue/ChatGPT-3.5-AccessToken-Web/blob/main/doc/images/20231229.png)
+* 把[项目的pandoranext-deploy.zip](https://github.com/xueandyue/ChatGPT-AccessToken-Web/blob/main/pandoranext-deploy.zip)放在服务器上，然后解压,cd pandoranext-deploy
+* 在./data/config.json中把license_id的值设置为获取的License Id ,其他字段的值不要改动!!
+* 在./data/tokens.json中把token的值修改为获取到的access_token ,其他字段的值不要改动!!
+* 确保安装了docker，启动了docker
+* docker network create my-net
+* docker pull pengzhile/pandora-next
+* (这里容器的名字一定要是PandoraNext，不要改) docker run -d --restart always --name PandoraNext --net=my-net  -v ./data:/data -v ./sessions:/root/.cache/PandoraNext pengzhile/pandora-next
+* 如果是windows系统上用dockers，那要把./data 和 ./sessions 改成绝对路径
+
+
 * docker pull xueandyue/next-web-pandora:latest
-* docker run -e username="你的gpt账号" -e password="你的gpt账号密码" -e CODE="123456" -p 3000:3000 -d xueandyue/next-web-pandora:latest
+* CODE是设置的访问密码，如果CODE=""则表示不设置密码，如果CODE="123456",则设置密码为123456
+* docker run --network my-net -e username="你的gpt账号" -e password="你的gpt账号密码" -e CODE="123456" -p 3000:3000 -d xueandyue/next-web-pandora:latest
 * 等待5分钟左右，在浏览器访问http://服务器域名(ip):3000/
 
 ## 备用部署一(利用access_token)
