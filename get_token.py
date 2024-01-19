@@ -22,7 +22,7 @@ def run():
     password=credentials[0][1]
 
  
-    url = "http://8.134.200.247:8080/gpt12345/api/auth/login"
+    url = "http://PandoraNext:8080/gpt12345/api/auth/login"
     
     headers = {
         'Content-Type': 'application/x-www-form-urlencoded'
