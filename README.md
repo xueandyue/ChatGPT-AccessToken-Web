@@ -62,7 +62,8 @@ pandoranext项目</a>,
 * CODE是设置的访问密码，如果CODE=""则表示不设置密码，如果CODE="123456",则设置密码为123456
 * docker run --network my-net -e username="你的gpt账号" -e password="你的gpt账号密码" -e CODE="123456" -p 3000:3000 -d xueandyue/next-web-pandora:latest
 * 等待5分钟左右，在浏览器访问http://服务器域名(ip):3000/
-
+* 大约要每隔10天重启3000端口的容器即可
+  
 ## 备用部署一(利用access_token)
 
 * 先获取Jwt的url, [在这里拿Jwturl](https://dash.pandoranext.com/)
@@ -73,6 +74,7 @@ pandoranext项目</a>,
 * 如果CODE=""则表示不设置密码
 * 在浏览器访问http://服务器域名(ip):3000/
 * 等待5分钟左右，在浏览器访问http://服务器域名(ip):3000/
+* 大约要每隔10天重新获取accessToken，重建创建3000端口的容器
 
 
 ## 备用部署二(利用access_token，支持多系统架构)
@@ -92,8 +94,7 @@ pandoranext项目</a>,
 * 如果CODE=""则表示不设置密码
 * 在浏览器访问http://服务器域名(ip):3000/
 * 等待5分钟左右，在浏览器访问http://服务器域名(ip):3000/
-
-
+* 大约要每隔10天重新获取accessToken，重建创建3000端口的容器
 
 
 ## 不支持的部署方式
