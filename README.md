@@ -1,4 +1,4 @@
-# ChatGPT-AccessToken-Web
+# ChatGPT-AccessToken-Web （pandora没了，TIME TO SAY GOODBYE !!）
 本项目基于使用Access Token的方式实现了网页版 ChatGPT的前端，不需要openai的api额度，是用<a href="https://github.com/Yidadaa/ChatGPT-Next-Web" target="_blank" title="ChatGPT-Next-Web">
 ChatGPT-Next-Web</a>项目进行修改而得，默认Main分支对接gpt3.5的模型，gpt4分支对接gpt4模型。另外本项目需要的后端服务是<a href="https://github.com/pandora-next/deploy" target="_blank" title="pandoranext项目">
 pandoranext项目</a>,
